@@ -1,3 +1,5 @@
+docker build -t "rviz" .
+
 xhost +
 sudo docker run -it \
     --device=/dev/dri \
