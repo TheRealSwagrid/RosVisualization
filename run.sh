@@ -7,4 +7,5 @@ sudo docker run -it \
     --volume=/tmp/.X11-unix:/tmp/.X11-unix \
     --env="DISPLAY=$DISPLAY" \
     --network=host \
+    --rm \
     rviz
