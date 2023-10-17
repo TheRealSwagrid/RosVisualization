@@ -1,4 +1,4 @@
-docker build -t "rviz" .
+#docker build -t "rviz" .
 
 xhost +
 sudo docker run -it \
