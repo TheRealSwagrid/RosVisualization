@@ -1,3 +1,5 @@
+5.5.0/run.sh 
+#!/usr/bin/env bash
 #docker build -t "rviz" .
 
 xhost +
