@@ -1,5 +1,6 @@
-5.5.0/run.sh 
 #!/usr/bin/env bash
+#5.5.0/run.sh
+
 docker build -t "rviz" .
 port="$1"
 
