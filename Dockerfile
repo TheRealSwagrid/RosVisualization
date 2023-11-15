@@ -1,6 +1,10 @@
 FROM osrf/ros:noetic-desktop-full
+ENV semantix_port=7500
 
 SHELL ["/bin/bash", "-c"]
+
+COPY RosVizualization.py /var
+COPY AbstractVirtualCapability.py /var
 
 RUN apt-get update && apt-get install -y xcb git
 #RUN rm /opt/ros/noetic/share/rviz/default.rviz
@@ -34,4 +38,4 @@ COPY default.rviz /opt/ros/noetic/share/rviz
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
 
-CMD source PlacerRobot/ros_ws/devel/setup.bash && rviz 
+CMD python /var/RosVizualization.py ${semantix_port} & source PlacerRobot/ros_ws/devel/setup.bash && rviz
