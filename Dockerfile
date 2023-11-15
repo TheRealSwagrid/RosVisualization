@@ -6,7 +6,7 @@ SHELL ["/bin/bash", "-c"]
 COPY RosVizualization.py /var
 COPY AbstractVirtualCapability.py /var
 
-RUN apt-get update && apt-get install -y xcb git
+RUN apt-get update && apt-get install -y xcb git python-is-python3
 #RUN rm /opt/ros/noetic/share/rviz/default.rviz
 RUN git clone https://github.com/TheRealSwagrid/PlacerRobot.git
 RUN git clone https://github.com/TheRealSwagrid/BlockHandler.git
