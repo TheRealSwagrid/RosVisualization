@@ -5,7 +5,7 @@ docker build -t "rviz" .
 port="$1"
 
 xhost +
-sudo docker run -it\
+sudo docker run -i -t\
     --device=/dev/dri \
     --group-add video \
     --volume=/tmp/.X11-unix:/tmp/.X11-unix \
