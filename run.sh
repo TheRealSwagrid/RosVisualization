@@ -4,7 +4,7 @@
 docker build -t "rviz" .
 port="$1"
 
-python /var/RosVizualization.py "$port" &
+python RosVizualization.py "$port" &
 
 xhost +
 sudo docker run \
