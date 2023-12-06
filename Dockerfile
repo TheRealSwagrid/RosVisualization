@@ -4,6 +4,7 @@ ENV semantix_port=7500
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update && apt-get install -y xcb git python-is-python3 pip
+RUN apt-get update && apt-get install -y --reinstall install python-numpy
 RUN python -m pip install numpy
 #RUN rm /opt/ros/noetic/share/rviz/default.rviz
 RUN git clone https://github.com/TheRealSwagrid/PlacerRobot.git
