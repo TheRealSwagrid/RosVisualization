@@ -34,6 +34,7 @@ RUN cp -R CrazyFly/ros_ws/src/isse_crazy PlacerRobot/ros_ws/src/
 RUN cd PlacerRobot/ros_ws && source /opt/ros/noetic/setup.bash && catkin_make
 #RUN cd BlockHandler/ros_ws && source /opt/ros/noetic/setup.bash && catkin_make
 
+EXPOSE 6080 11311
 
 COPY default.rviz /opt/ros/noetic/share/rviz
 ENTRYPOINT ["/ros_entrypoint.sh"]
