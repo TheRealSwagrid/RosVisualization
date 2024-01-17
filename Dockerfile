@@ -1,5 +1,7 @@
 FROM osrf/ros:noetic-desktop-full
 ENV semantix_port=7500
+ENV xmlrpc_port=45100
+ENV tcpros_port=45101
 
 SHELL ["/bin/bash", "-c"]
 
@@ -37,4 +39,4 @@ COPY default.rviz /opt/ros/noetic/share/rviz
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
 
-CMD source PlacerRobot/ros_ws/devel/setup.bash && rviz
+CMD source PlacerRobot/ros_ws/devel/setup.bash && rviz xmlrpc_port:=${xmlrpc_port} tcpros_port:=${tcpros_port}
