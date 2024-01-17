@@ -39,4 +39,4 @@ COPY default.rviz /opt/ros/noetic/share/rviz
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
 
-CMD source PlacerRobot/ros_ws/devel/setup.bash && rviz xmlrpc_port:=${xmlrpc_port} tcpros_port:=${tcpros_port}
+CMD source PlacerRobot/ros_ws/devel/setup.bash && rviz
