@@ -2,6 +2,8 @@ FROM osrf/ros:noetic-desktop-full
 ENV semantix_port=7500
 ENV xmlrpc_port=45100
 ENV tcpros_port=45101
+ENV ROS_MASTER_URI=http://172.17.0.3:11311
+ENV ROS_IP=172.17.0.3
 
 SHELL ["/bin/bash", "-c"]
 
