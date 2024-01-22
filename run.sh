@@ -14,6 +14,6 @@ sudo docker run \
     --volume=/tmp/.X11-unix:/tmp/.X11-unix \
     --env="DISPLAY=$DISPLAY" \
     --env="semantix_port=$port" \
-    --network=network \
+    --network="$network" \
     --rm \
     rviz
