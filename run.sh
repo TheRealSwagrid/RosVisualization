@@ -3,6 +3,7 @@
 
 docker build -t "rviz" .
 port="$1"
+network"$2"
 
 python RosVizualization.py "$port" &
 
