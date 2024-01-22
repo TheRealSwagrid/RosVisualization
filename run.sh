@@ -3,7 +3,7 @@
 
 docker build -t "rviz" .
 port="$1"
-network"$2"
+network="$2"
 
 python RosVizualization.py "$port" &
 
@@ -14,6 +14,6 @@ sudo docker run \
     --volume=/tmp/.X11-unix:/tmp/.X11-unix \
     --env="DISPLAY=$DISPLAY" \
     --env="semantix_port=$port" \
-    --network=host \
+    --network=network \
     --rm \
     rviz
