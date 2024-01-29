@@ -1,3 +1,4 @@
+import socket
 import sys
 from time import sleep
 
@@ -16,7 +17,7 @@ if __name__ == "__main__":
         port = None
         if len(sys.argv[1:]) > 0:
             port = int(sys.argv[1])
-        server = VirtualCapabilityServer(port)
+        server = VirtualCapabilityServer(port, socket.gethostbyname(socket.gethostname()))
         tf = RosVizualization(server)
         tf.start()
         while server.running:
